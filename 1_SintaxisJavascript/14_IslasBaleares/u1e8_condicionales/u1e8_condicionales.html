@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Condicional Switch</title>
+    </head>
+    <body>
+        <script>
+            alert("Bienvenido a Cantabrator, como Akinator pero cantabro");
+            var respuesta = prompt("La localidad en la que piensas tiene costa");
+
+            if (respuesta==="si" || respuesta==="Si" || respuesta==="SI"){
+                var respuesta = prompt("Es famosa por su batalla de flores");
+                if(respuesta==="si" || respuesta==="Si" || respuesta==="SI"){
+                    alert("La respuesta es Laredo");
+                } else if(respuesta==="no" || respuesta==="No" || respuesta==="NO"){
+                    alert("La respuesta es Castro-Urdiales");
+                }
+            } 
+            else if(respuesta==="no" || respuesta==="No" || respuesta==="NO") {
+                var respuesta = prompt("Es famosa por sus picos");
+                if(respuesta==="si" || respuesta==="Si" || respuesta==="SI"){
+                    alert("La respuesta es Potes");
+                } else if(respuesta==="no" || respuesta==="No" || respuesta==="NO"){
+                    alert("La respuesta es Torrelavega");
+                }
+            }
+            else{
+                alert("Reinicia y responda un parametro valido");
+            }
+        </script>
+    </body>
+</html>

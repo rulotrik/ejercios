@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+        <script type="text/javascript" src="js/biblioteca.js"></script>
+        <script type="text/javascript" src="js/socio.js"></script>
+        <script type="text/javascript" src="js/libro.js"></script>
+        <script type="text/javascript" src="js/functions.js"></script>
+    </head>
+<!--    onload="cargaInicial()"-->
+    <body >
+        <div id="f1">
+            <div id="f1c1">
+                <h2>- BIBLIOTECAS -</h2>
+                <table id="bibliotecas">
+                    <tr>
+                        <th>ID</th><th>Nombre</th><th>Localidad</th><th>Responsable</th><th>Cantidad de libros</th>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="f1c2">
+                <h2>- LIBROS -</h2>
+                <table id="libros">
+                    <tr><th>ID</th><th>Titulo</th><th>Autor</th><th>Editorial</th><th>Biblioteca</th></tr>
+                </table>
+            </div>
+            <div id="f1c3">
+            <h2>- SOCIOS -</h2>
+            <table id="socios">
+                <tr><th>ID</th><th>Nombre</th><th>Apellido</th><th>Edad</th><th>Biblioteca</th><th>Libro prestado</th></tr>
+            </table>
+        </div>
+        </div>
+        
+        <div id="f2">
+            <div id="f2c1">
+                <li>
+                    <ul><button onclick="newBiblioteca()">Nueva Biblioteca</button></ul>
+                    <ul><button onclick="updateBiblioteca()">Modificar Biblioteca</button></ul>
+                    <ul><button onclick="deleteBiblioteca()">Borrar Biblioteca</button></ul>
+                    <ul><button onclick="findBiblioteca()">Buscar Biblioteca</button></ul>
+<!--                    <ul><button onclick="listBibliotecas()">Listar Bibliotecas</button></ul>-->
+                </li>
+            </div>
+            <div id="f2c2">
+                <li>
+                    <ul><button onclick="newLibro()">Nuevo Libro</button></ul>
+                    <ul><button onclick="updateLibro()">Modificar Libro</button></ul>
+                    <ul><button onclick="deleteLibro()">Borrar Libro</button></ul>
+                    <ul><button onclick="findLibro()">Buscar Libro</button></ul> 
+<!--                    <ul><button onclick="listLibro()">Listar Libros</button></ul> -->
+                </li>
+            </div>
+            <div id="f2c3">
+                <li>
+                    <ul><button onclick="newSocio()">Nuevo Socio</button></ul>
+                    <ul><button onclick="updateSocio()">Modificar Socio</button></ul>
+                    <ul><button onclick="deleteSocio()">Borrar Socio</button></ul>
+                    <ul><button onclick="findSocio()">Buscar Socio</button></ul>
+<!--                    <ul><button onclick="listSocio()">Listar Socio</button></ul>-->
+                </li>
+            </div>
+        </div>
+    </body>
+         </html>

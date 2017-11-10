@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>U1E11</title>
+    </head>
+    <body>
+        <script>
+
+            var primeraVezNom = true;
+            var primeraVezApe = true;
+            var nombre, apellido;
+
+            //Todo lo relacionado a la verificacion del nombre
+            do{
+                if(primeraVezNom){
+                    nombre = prompt("Nombre del primer presidente español");
+                    primeraVezNom = false;
+                }
+                else{
+                    alert("Introduze un parametro válido");
+                    nombre = prompt("Nombre del primer presidente español");
+                }
+            }while (nombre.toLowerCase() != "adolfo") //Parsea a minusculas lo introducido en pantalla
+                var estadoNom=true;
+
+            //Todo lo relacionado a la verificacion del apellido
+            do{
+                if(primeraVezApe){
+                    apellido = prompt("Apellido del primer presidente español");
+                    primeraVezApe = false;
+                }
+                else{
+                    alert("Introduze un parametro válido");
+                    Apellido = prompt("Apellido del primer presidente español");
+                }
+            }while (apellido.toLowerCase() != "suarez") //Parsea a minusculas lo introducido en pantalla
+                var estadoApe=true;
+
+            //En caso de acertar mostrara un mensaje de enhorabuena
+            if((estadoNom == true) && (estadoApe == true)){
+                alert("ACERTASTE !!");
+                      }
+
+
+        </script>
+    </body>
+</html>
+
+

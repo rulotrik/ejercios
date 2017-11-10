@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var numeroSinParse = prompt("Introduzca un numero");
+            var numero = parseInt(numeroSinParse);
+            var base = prompt("¿En que base se encuentra el numero que vas a introducir?");
+
+            if (base.toLocaleLowerCase() == "binario"){ 
+                var hex = parseInt(numero, 2).toString(16);
+                var dec = parseInt(numero, 2).toString(10);
+                var oct = parseInt(numero, 2).toString(8);
+
+                alert("Octal: "+ oct +"\nDecimal: "+ dec +"\nHexadecimal: "+ hex);
+
+            } else if (base.toLocaleLowerCase() == "octal"){ 
+                var hex = parseInt(numero, 8).toString(16);
+                var dec = parseInt(numero, 8).toString(10);
+                var bi = parseInt(numero, 8).toString(2);
+
+                alert("Binario: "+ bi +"\nDecimal: "+ dec +"\nHexadecimal: "+ hex);
+
+            } else if (base.toLocaleLowerCase() == "decimal"){ 
+                var hex = numero.toString(16);
+                var oct = numero.toString(8);
+                var bi = numero.toString(2);
+
+                alert("Binario: "+ bi +"\nOctal: "+ oct +"\nHexadecimal: "+ hex);
+
+            } else if (base.toLocaleLowerCase() == "hexadecimal"){ 
+                var dec = parseInt(numeroSinParse, 16).toString(10);
+                var oct = parseInt(numeroSinParse, 16).toString(8);
+                var bi = parseInt(numeroSinParse, 16).toString(2);
+
+                alert("Binario: "+ bi +"\nOctal: "+ oct +"\nDecimal: "+ dec);
+            }
+        </script>
+    </body>
+</html>

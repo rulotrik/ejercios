@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>u2e1_string</title>
+    </head>
+    <body>
+        <script>
+            ale
+            var person = new Object();
+            person = prompt("Introduce tus datos");
+
+            //Tamaño de la cadena
+            var tamanio = person.length - 5;
+            alert("Tamaño de la cadena sin contar el año: " + tamanio);
+
+            //Numero de vocales
+            var numVocales = person.match(/[aeiou]/gi).length;
+            alert("Numero de vocales: "+numVocales);
+
+            //Tranformacion de la cadena a mayusculas
+            alert("Cadena en mayusculas: " + person.toLocaleUpperCase());
+
+            //Presentacion de datos
+            var splitResult;
+            splitResult = person.split(" ");
+            alert("Nombre: "+splitResult[0] +"\n" +"Apellido 1: "+splitResult[1] +"\n" +"Apellido 2: "+splitResult[2] + "\n" +"Año: "+splitResult[3]);
+
+            //Nombre de usuario
+            var iniciales;
+            iniciales = splitResult[0].charAt(0);
+            iniciales += splitResult[1];
+            iniciales += splitResult[2].charAt(0);
+            iniciales += splitResult[3].substring(0,2);
+            alert(iniciales.toLocaleLowerCase());
+        </script>
+    </body>
+</html>

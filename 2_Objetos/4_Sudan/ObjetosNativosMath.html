@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>u2e1_string</title>
+    </head>
+    <body>
+        <script>
+            /* CARACTERISTICAS:
+            - Permite realizar operaciones matematicas.
+            - No es un construcotr: No usamos var x = new Math();
+            - Ej: var pi = Math.PI; var raiz = Math.sqrt(36);
+            */
+
+            //PROPIEDADES:
+            // E, LN2, LN10, LOG2E, LOG10, PI, SQRT1_2, SQRT2
+            var pi = Math.PI;
+            alert("El numero PI vale: "+pi);
+
+            //METODOS MAS COMUNES:
+            //random(); Devuelve un numero aleatorio entre 0 y 1
+            alert ("Numero aleatorio: "+Math.random());
+
+            //max(<lista de valores>) // min(<lista de valores>)
+            alert("Maximo de valores: "+Math.max(1,5,9,10,25,53));
+            alert("Minimo de valores: "+Math.min(1,5,9,10,25,53));
+
+            //round(<numero>): Devuelve un numero redondeado al alza o a la baja
+            var a = 4.3;
+            var b = 4.7;
+            var c = 4.5;
+            alert("Redondeo de "+a+" es: "+Math.round(a)); //Devuelve 4
+            alert("Redondeo de "+b+" es: "+Math.round(b)); //Devuelve 5
+            alert("Redondeo de "+c+" es: "+Math.round(c)); //Devuelve 5
+
+            //ceil(<numero>): redondea siempre al alza:
+            alert("Redondeo de "+a+" es: "+Math.round(a)); //Devuelve 5
+
+            //floor(<numero>): redondea siempre a la baja:
+            alert("Redondeo de "+b+" es: "+Math.round(b)); //Devuelve 4
+
+            //Numero aleatorio entre 0 y 10:
+            var aleatorio = Math.floor(Math.random()*11); 
+            alert("Aleatorio es: "+aleatorio);
+
+            //pow(<base>,<exponente>);: devuelve el valor de la potencia
+            alert("La potencia de 3 al cuadrado es: "+Math.pow(3,2));
+
+            //sqrt(<numero>): devuelve la raiz del numero:
+            alert("Raiz de 36 es: "+Math.sqrt(36));
+
+            //abs(<numero>): devuelve el valor absoluto de un numero
+            alert("Valor absoluto de -5: "+Math.abs(-5));
+            
+            //Metodos trigonometricos:
+            //sin, cos, tan, asin, acos, atan, atan2
+        </script>
+    </body>
+</html>

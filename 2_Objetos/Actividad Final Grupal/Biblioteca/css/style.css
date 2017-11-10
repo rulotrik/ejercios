@@ -1,0 +1,92 @@
+body{
+    font-family: "Arial";
+    color: #000000;
+}
+/* CONTENEDORES */
+#f1{
+    background-color: #CA56AD;
+    height: 70%;
+    text-align : center;
+    /*border-style: dotted;*/
+    border-color: white;
+    border-width: 2.5px;
+}
+#f2{
+    background-color: #7ee6de;
+    height: 29%;
+    text-align : center;
+}
+
+/* Columnas del div superior */
+#f1c1{
+    width: 30%;
+    float: left;
+    vertical-align: top;
+}
+
+#f1c2{
+    width: 25%;
+    margin:0 auto !important; 
+    display:inline-block;
+    vertical-align: top;
+}
+
+#f1c3{
+    width: 38%;
+    float: right;
+    vertical-align: top;
+}
+
+/* Columnas del div inferior */
+#f2c1{
+    width: 25%;
+    float: left;
+    list-style-type:none;
+}
+
+#f2c2{
+    width: 25%;
+    margin:0 auto !important; 
+    display:inline-block;
+    list-style-type:none;
+}
+
+#f2c3{
+    width: 40%;
+    float: right;
+    list-style-type:none;
+}
+table, th, td{
+    padding: 0px;
+    /*border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: black;*/
+
+}
+th,td{
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    border-color: black;
+}
+table{
+    margin-left:20px;
+}
+#bibliotecas{
+    margin-left: 0px;
+}
+#bibliotecas, th{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+button{
+    border-color: #CA56AD;
+    border-radius: 10px;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #CA56AD;
+    color: #FFFFFF;
+}
+h2{
+   color: #7ee6de;
+}

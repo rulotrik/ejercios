@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Condicionales, sentencias if ... else</title>
+    </head>
+    <body>
+        <script>
+            //IF: Especifica un bloque de codigo que se ejecuta si una condicion es cierta.
+            /* SINTAXIS:
+                if(<condicion>){
+                 //Instrucciones si la condicion es verdadera
+                } */
+
+            var nota = 3;
+            if(nota >= 5){
+                alert("Has aprobado");
+            } 
+
+            //IF...ELSE: Especifica un bloque de codigo que especifica si una condicion es falsa.
+            /*SINTAXIS:
+                if(<condicion>){
+                    //Instrucciones si la condion es verdadera
+                } else {
+                    // Instrucciones si la condicion es falsa
+                }
+                */
+
+            var nota2 = 8;
+            if(nota2 >= 5){
+                alert("Has aprobado");
+            } else {
+                alert("Has suspendido");
+            }
+
+            //ELSE IF: especifica una nueva condicion si la primera es falsa
+            /*SINTAXIS:
+             if(<condicion>){
+                    //Instrucciones si la condion es verdadera
+                } else if (<condicion>){
+                    // Instrucciones si la condicion 1 es falsa y la condicion 2 es verdadera
+                } else {
+                    // Instrucciones si la condicion 1 y 2 son falsas
+                }
+            */
+
+            var nota3 = 6;
+            if(nota3 < 5){
+                alert("Has suspendido");
+            } else if(nota3 == 5){
+                alert("Has sacado un suficiente");
+            } else if(nota3 == 6){
+                alert("Has sacado un bien");
+            } else if (nota3 == 7 || nota3 == 8){
+                alert("Has sacado un notable");
+            } else {
+                alert("Has sacado un sobresaliente");
+            }
+        </script>
+    </body>
+</html>

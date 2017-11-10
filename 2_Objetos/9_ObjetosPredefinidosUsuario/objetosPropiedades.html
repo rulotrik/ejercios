@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objetos. Propiedades</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Sintaxis de acceso a las propiedades de un objeto:
+            - objeto. propiedad;
+            - objeto["propiedad"]
+            - objeto [expresion]
+            */
+
+            //Creamos el objeto
+            var persona1 = {nombre: "Ada", apellido: "Lovelace", ano:"1815"};
+
+            //Maneras de obtener elementos del objeto
+            // 1
+            alert(persona1.nombre);
+            // 2
+            alert(persona1["apellido"]);
+            // 3
+            var expresion = "ano";
+            alert(persona1[expresion]);
+
+            /*
+            Recorrer las propiedades de un objeto:
+            for (<nombre_variable> in <nombre_objeto>){
+                <nombre_objeto>[<nombre_variable>];
+            }
+            */
+
+            for (x in personal){
+                alert(persona1[x]);
+            }
+            
+            /*
+            Añadir una nueva propiedad a un objeto:
+            <nombre_objeto>.<nueva_propiedad> = <valor_propiedad>;
+            */
+            
+            persona1.nacionalidad = "Inglaterra";
+            alert(persona1.nacionalidad);
+            
+            /*
+            Borrar una propiedad de un objeto:
+            delete <nombre_objeto>.<nombre_propiedad>;
+            */
+            
+            delete persona1.ano;
+        </script>
+    </body>
+</html>

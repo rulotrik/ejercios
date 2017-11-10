@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Objetos nativos Date</title>
+    </head>
+    <body>
+        <script>
+            /*CREACION DE OBJETOS DE TIPO DATE
+            Nota: los meses comienzan en 0. Los dias de la semana tambien, siendo el 0 el domingo, el 1 el lunes ... */
+
+            //Creacion de fecha actual:
+            var actual = new Date();
+            alert(actual);
+            //Creacion de fecha con cadenas:
+            var d1 = new Date("Wed Mar 25 2015 09:23:45 GMT +0100 (W.Europe Standard Time)"); //Ignora si el dia de la semana esta mal o lo parentesis
+            var d2 = new Date("October 12, 2016 10:30:00");
+            var d3 = new Date("January 25 2015");
+            var d4 = new Date("Jan 25 2015");
+            //Podemos utilizar comas por que se ignoran 
+            var d5 = new Date("2016-05-12 12:34:25");
+            var d6 = new Date("2016-05-12"); // YYYY-MM-DD
+            var d7 = new Date("2016/05/12"); // YYYY/MM/DD
+            var d8 = new Date("2016-05"); // El dia se sustituye por 1
+            var d9 = new Date("2016"); // El dia y el mes se sustituyen por 1
+            //OJO !!! INCLUIMOS 0 EN DIAS Y MESES INFERIORE A 10
+            alert(d1);
+            alert(d2);
+            alert(d3);
+            alert(d4);
+            alert(d5);
+            alert(d6);
+            alert(d7);
+            alert(d8);
+            alert(d9);
+
+            //Creacion de fechas en milisegundos
+            var dms = new Date(86400000);
+            alert("Fecha en milisegundos: "+dms);
+
+            //Creacion de fechas con numeros
+            var fechaLargo = new Date(2015,11,10,14,30,25);
+            var fechaCorto = new Date(2015,11,10);
+            alert("Fecha largo: "+fechaLargo+" Fecha corta: "+fechaCorto);
+
+            var fecha = new Date();
+            alert("Fecha: "+fecha);
+            alert("toString: "+fecha.toString());
+            alert("toUTCString: "+fecha.toUTCString());
+            alert("toDateString: "+fecha.toDateString()); // Me gusta
+
+            //METODOS GET
+            var fc = new Date("October 1, 2016 10:30:20");
+            alert(fc.getDay() +" "+fc.getDate()+"/"+fc.getMonth()+"/"+fc.getFullYear());
+            alert(fc.getHours()+":"+fc.getMinutes()+":"+fc.getSeconds()+":"+fc.getMilliseconds());
+
+            alert("Ms desde 1/1/1970: "+fc.getTime());
+
+            //METODOS SET
+            fc.setDate(31);
+            fc.setMonth(11);
+            fc.setFullYear(2031);
+            fc.setHours(23);
+            fc.setMinutes(59);
+            fc.setSeconds(59);
+            fc.setMilliseconds(59);
+            alert(fc.toString());
+
+            //Ejemplo de calculo de horas
+            fc.setMonth(fc.getMonth()+3);
+            alert(fc.toString());
+
+        </script>
+    </body>
+</html>

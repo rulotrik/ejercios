@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Condicional Switch</title>
+    </head>
+    <body>
+        <script>
+            //SWITCH:
+            // Se ultiliza para hacer diferentes acciones basadas en diferentes condiciones.
+            // La condicion se evalua una unica vez
+            // Si hay alguna coincidencia con algun valor se ejecuta el bloque de codigo correspondientes
+
+            /*
+            switch (<expresion>){
+            case valor1:
+                Instrucciones para valor1;
+                break;
+            case valor2:
+                Instrucciones para valor2;
+                break;
+            case valor3:
+                Instrucciones para valor3;
+                break;
+            default:
+                Instrucciones en caso de que se cumpla ninguna condicion
+            } 
+            */
+
+            var nota = 3;
+            var mensaje = "";
+
+            //Switch abreviado
+            switch(nota){
+                case 0:
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                    mensaje = "Suspenso";
+                    break;
+
+                case 5:
+                    mensaje = "Suficiente";
+                    break;
+
+                case 6:
+                    mensaje = "Bien";
+                    break;
+
+                case 7:
+                case 8:
+                    mensaje = "Notable";
+                    break;
+
+                case 9:
+                case 10:
+                    mensaje = "Sobresaliente";
+                    break;
+
+                default:
+                    mensaje = "El valor no es valido";
+                       }
+            alert(mensaje);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>u1e5_geometria</title>
+        <script src="formulas.js"></script> <!--importar fichero js-->
+    </head>
+    <body>
+        <div style=" float: left" id="div1">
+            <p>Area del triangulo</p>
+            <input type="radio" name="opcion" id="myCheck" onclick="comprobar()">
+            <p>Perimetro triangulo equilatero</p>
+            <input type="radio" name="opcion" id="myCheck2" onclick="comprobar()">
+            <p>Perimetro triangulo isosceles</p>
+            <input type="radio" name="opcion" id="myCheck3" onclick="comprobar()">
+            <p>Perimetro triangulo escaleno</p>
+            <input type="radio" name="opcion" id="myCheck4" onclick="comprobar()">
+            <p>Area del cuadrado</p>
+            <input type="radio" name="opcion" id="myCheck5" onclick="comprobar()">
+            <p>Perimetro del cuadrado</p>
+            <input type="radio" name="opcion" id="myCheck6" onclick="comprobar()">
+            <p>Area del rectangulo</p>
+            <input type="radio" name="opcion" id="myCheck7" onclick="comprobar()">
+            <p>Area del circulo</p>
+            <input type="radio" name="opcion" id="myCheck8" onclick="comprobar()">
+            <p>Longitud circunferencia</p>
+            <input type="radio" name="opcion" id="myCheck9" onclick="comprobar()">
+        </div>
+        <div style="float: right; padding-left: 50px" id="div2">
+            <script>
+                function calcular(a){
+                    if(a==1){
+                        var b = document.getElementById("caja1").value;
+                        var h = document.getElementById("caja2").value;
+                        var resultado = areaTriangulo(b, h);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==2){
+                        var l = document.getElementById("caja1").value;
+                        var resultado = perimetroTrianguloEquilatero(l);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==3){
+                        var b = document.getElementById("caja1").value;
+                        var h = document.getElementById("caja2").value;
+                        var c = document.getElementById("caja3").value;
+                        var resultado = perimetroTrianguloIsosceles(b, h, c);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==4){
+                        var b = document.getElementById("caja1").value;
+                        var h = document.getElementById("caja2").value;
+                        var c = document.getElementById("caja3").value;
+                        var resultado = perimetroTrianguloEscaleno(b, h, c);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==5){
+                        var l = document.getElementById("caja1").value;
+                        var resultado = areaCuadrado(l);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==6){
+                        var l = document.getElementById("caja1").value;
+                        var resultado = perimetroCuadrado(l);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==7){
+                        var b = document.getElementById("caja1").value;
+                        var h = document.getElementById("caja2").value;
+                        var resultado = areaCuadrado(b, h);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==8){
+                        var l = document.getElementById("caja1").value;
+                        var resultado = perimetroCuadrado(l);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==9){
+                        var r = document.getElementById("caja1").value;
+                        var resultado = areaCirculo(r);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    } else if(a==10){
+                        var r = document.getElementById("caja1").value;
+                        var resultado = longitudCircunferencia(r);
+
+                        document.getElementById("div2").innerHTML += 
+                            '<p>'+resultado+'</p>';
+
+                    }
+                }
+                function comprobar() {
+                    if(document.getElementById("myCheck").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Base:</p><input type="text" id="caja1"> <p>Altura: </p><input type="text" id="caja2"> <input type="button" value="Calcular" onclick="calcular(1)">';
+                    } else if(document.getElementById("myCheck2").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Lado:</p><input type="text" id="caja1"/> <input type="button" value="Calcular" onclick="calcular(2)"/>';
+                    } else if(document.getElementById("myCheck3").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Base:</p><input type="text" id="caja1"/> <p>Altura:</p><input type="text" id="caja2"/> <p>Diagonal:</p><input type="text" id="caja3"/> <input type="button" value="Calcular" onclick="calcular(3)"/>';
+                    } else if(document.getElementById("myCheck4").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Base:</p><input type="text" id="caja1"> <p>Altura:</p><input type="text" id="caja2"> <p>Diagonal:</p><input type="text" id="caja3"> <input type="button" value="Calcular" onclick="calcular(4)">';
+                    } else if(document.getElementById("myCheck5").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Area:</p><input type="text" id="caja1"> <input type="button" value="Calcular" onclick="calcular(5)">';
+                    } else if(document.getElementById("myCheck6").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Altura:</p><input type="text" id="caja1"> <input type="button" value="Calcular" onclick="calcular(6)">';
+                    } else if(document.getElementById("myCheck7").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Base:</p><input type="text" id="caja1"> <p>Altura:</p><input type="text" id="caja2"> <input type="button" value="Calcular" onclick="calcular(7)">';
+                    } else if(document.getElementById("myCheck8").checked == true){
+                        document.getElementById("div2").innerHTML = 
+                            '<p>Area:</p><input type="text" id="caja1"> <input type="button" value="Calcular" onclick="calcular(8)">';
+                    }  else if(document.getElementById("myCheck9").checked == true){
+                        document.getElementById("div2").innerHTML = '<p>Radio:</p><input type="text" id="caja1"> <input type="button" value="Calcular" onclick="calcular(9)">';
+                    } else if(document.getElementById("myCheck10").checked == true){
+                        document.getElementById("div2").innerHTML = '<p>Radio:</p><input type="text" id="caja1"> <input type="button" value="Calcular" onclick="calcular(10)">';
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

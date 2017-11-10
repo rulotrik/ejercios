@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Parametros de funciones</title>
+    </head>
+
+    <body>
+        <script>
+            //VARIABLES LOCALES
+            /* - Sedefine dentro de una funcion
+               - Tienen ambito local en la funcion
+               - Son accesibles unicamente dentro de la funcion
+               - Podemos declarar variables con el mismo nombre en diferentes funciones
+               - Variable local desaparece cuando finaliza la funcion
+               */
+            function saludar(){
+                var saludo = "Hola";
+                alert(saludo);
+            }
+            saludar();
+
+            //VARIABLES GLOBALES
+            /* - Se definen fuera de las funciones
+               - Tienen ambito global (en toda la pagina)
+               - Son accesibles desde fuera y dentro de las funciones
+               - Variables globales desaparecen cuando se sale de la pagina */
+
+            var despedida = "Adios";
+            function despedir(){
+                alert(despedida);
+            }
+            despedir();
+
+            // VARIABLES AUTOMATICAMÉNTE GLOBALES
+            /* - Si asignamos un valor a una variable no declarada se convierte en global.*/
+            function preguntar(){
+                preguntar = "¿De que color es el caballo blanco de Santiago?";
+            }
+
+            preguntar();
+            alert(preguntar);
+
+            //VARIABLES LOCALES Y GLOBALES CON EL MISMO NOMBRE
+            var miVariable = "Fuera";
+            function ambito(){
+                var miVariable = "Dentro";
+                alert (miVariable);
+            }
+            alert(miVariable); //Devuelve fuera
+            ambito(); //Devuelve dentro
+            alert(miVariable); //Devuelve fuera
+
+            //VARIABLE GLOBAL DEFINIDA DENTRO DE UNA FUNCION
+            var miVariable2 = "Fuera";
+            function ambito2(){
+                miVariable2 = "Dentro";
+                alert (miVariable2);
+            }
+            alert(miVariable2); //Devuelve fuera
+            ambito2(); //Devuelve dentro
+            alert(miVariable2); //Devuelve dentro   
+
+        </script>
+    </body>
+</html>

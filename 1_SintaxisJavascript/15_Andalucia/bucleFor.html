@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Condicional Switch</title>
+    </head>
+    <body>
+        <script>
+            /* SINTAXIS:
+                for(<sentencia_1; sentencia_2; sentencia_3>){
+                    //Codigo que se repite
+                }
+
+                - Sentencia 1: se ejecuta antes de que empiece el bloque de codigo a repetir:
+                -Sentencia 2: define la condicion por la que el bloque de codigo se va ejecutar.
+                - Sentencia 3: se ejecuta despues de que acabe el bloque de codigo a repetir. */
+
+            var i;
+            for (i = 0; i < 5; i++){
+                alert(i);
+            }
+
+            /* VARIACIONES*/
+            // 1. Si omitimos la primera sentencia debemos haber inicializado la variable con anterioridad
+            var j = 1;
+            for (; j<=5; j++){
+                alert("j = "+j)
+            }
+
+            // 2. Si omitimos la segunda sentencia, dentro del codigo a repetir debemos incluir una instruccion break.
+            var k;
+            for (k=1; ;k++){
+                alert("k = "+k);
+                if(k==5){
+                    break;
+                }
+            }
+
+            //3. Si omitimos la sentencia 3 debemos incrementar el valor de la variable dentro del bucle.
+
+            var l;
+            for(l=1; l<=5; ){
+                alert("l = "+l);
+                l++;
+            }
+
+            //4. Podemos trabajar con dos o mas valores dentro del bucle for
+            var m, n
+            for (m=1, n=1   0; m<=10, n>=1; m++, n--){
+                alert("m="+m+", n="+n);
+            }
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            var cont = 0;
+            for(var year=(new Date()).getFullYear()+1; year<=2100; year++){
+                var sanJuan = new Date(year, 5, 23);
+                if (sanJuan.getDay()===6){
+                    cont++;
+                }
+            }
+
+            alert('De aquí al 2100 San Juan caerá en sábado ' + cont + ' veces.');  
+        </script>
+    </body>
+</html>

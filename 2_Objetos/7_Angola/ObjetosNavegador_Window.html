@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Objetos nativos Boolean</title>
+    </head>
+    <body>
+        <p id="ventana"></p>
+        <button onclick="crearVentana()">Crear ventana</button>
+        <button onclick="cerrarVentana()">Cerrar ventana</button>
+        <button onclick="redimensionarVentana()">Redimensionar ventana</button>
+        <button onclick="moverVentana()">Mover ventana</button>
+        <button onclick="enfocar()">Enfocar</button>
+        <button onclick="imprimir()">Imprimir</button>
+        <script>
+            /* 
+            CARACTERISTICAS:
+            - Representa una ventana abierta en un navegador.
+            - Si una ventana tiene etiquetas de tipo <iframe> el navegador crea un objeto window para el html inicial y uno para cada <iframe>
+            - Todos los objetos, funciones, variables ... son miembros del onjeto window: las funciones son sus metodos; las variables globales y el DOM son propiedades.
+            - No todos los metodos sirven para todos los navegadores: hay que comprobar la compatibilidad
+            */
+            //PROPIEDADES BASICAS DE WINDOW
+            window.name = "Mi ventana";
+            var texto = "";
+            //Nombre de la ventana
+            texto += "<br/>Nombre: "+window.name;
+            //Tamaño de la ventana con Toolbar y Scrollbar
+            texto += "<br/>Alto externo: "+window.outerHeight;
+            texto += "<br/>Ancho externo: "+window.outerWidth;
+            //Tamaño de la ventana sin Toolbar ni Scrollbar
+            texto += "<br/>Alto interno: "+window.innerHeight;
+            texto += "<br/>Ancho interno: "+window.innerWidth;
+            //Scroll horizontal y vertical
+            texto += "<br/>Scroll horizontal: "+window.pageXOffset;
+            texto += "<br/>Scroll vertical: "+window.pageYOffset;
+            //Distancia de la esquina superior izquierda
+            texto += "<br/>Distancia desde la izquierda: "+window.screenX;
+            texto += "<br/>Distancia desde arriba: "+window.screenY;   
+
+            document.getElementById("ventana").innerHTML = texto;
+
+            /*
+            PROPIEDADES CON IFRAMES:
+            - frames: devuelve todos los emenetos iframe de la ventana
+            frameElement: devuelve el frame en el que la ventana esta insertada
+            length: devuelve el numero de frames que tiene la ventana
+            */
+
+            /*
+            PROPIEDADES CON OTRAS VENTANAS:
+            - closed: devuelve un booleano si la ventana esta cerrada
+            - opened: devuelve una referencia con la ventana que creo la ventana actual
+            - parent: devuelve la ventana padre de la ventana actual.
+            - self: devuelve la ventana actual. 
+            */
+
+            /*
+            OTROS OBJETOS DEL NAVEGADOR:
+            window.document
+            window.navigator
+            window.screen
+            window.history
+            window.location
+            */
+
+            //METODOS DE WINDOW MAS IMPORTANTES
+            var miVentana; //Crear fuera de las funciones para poder acceder a ella
+
+            //open(<URL>,<nombre>, <especificaciones>)
+            function crearVentana(){
+                //miVentana = window.open("http://www.google.com","","");
+                miVentana = window.open("", "", "width=500, height=200");
+                miVentana.document.write("<h1>Mi ventana</h1>");
+            }
+
+            //close(): cierra una ventana en concreto
+            function cerrarVentana(){
+                miVentana.close();
+            }
+
+            //resizeBy(<nºpix>, <nºpix>): redimensiona una ventana un numero de pixeles respecto a su tamaño actual
+            function redimensionarVentana(){
+                miVentana.resizeBy(10,10);
+            }
+
+            //resizeTo(<nºpix>, <nºpix>): redimensiona una ventana al numero de pixeles indicado
+            function redimensionarVentana(){
+                miVentana.resizeTo(10,10);
+            }
+
+            //moveBy(<nºpix>, <nºpix>): mueve una ventana un numero de pixeles respecto a su posicion actual
+            function moverVentana(){
+                miVentana.moveBy(10,10);
+            }
+
+            //moveTo(<nºpix>, <nºpix>): mueve una ventana a una posicion en concreto
+            function situarVentana(){
+                miVentana.moveTo(10,10);
+            }
+
+            //scrollBy(<nºpix>, <nºpix>): mueve las barras de scroll un numero de pixeles desde la posicion actual
+
+            //scrollTo(<nºpix>, <nºpix>): mueve las barras de scroll a una posicion determinada
+
+            //focus(): pone el foco en la ventana indicada
+            function enfocar(){
+                miVentana.focus();
+            }
+
+            //print(): imprime la ventana indicada
+            function imprimir(){
+                print(); //Imprime la venta en la que el foco se encuentre
+                miVentana.print(); //Imprime la ventana especificada
+            }
+
+            //stop(): detener la carga de la pagina
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Objetos del navegador. Window. Tiempo</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function startTime(){
+                today=new Date();
+                h=today.getHours();
+                m=today.getMinutes();
+                s=today.getSeconds();
+                m=checkTime(m);
+                s=checkTime(s);
+                document.getElementById('reloj').innerHTML=h+":"+m+":"+s;
+                t=setTimeout('startTime()',500);}
+
+            function funcionando()
+
+            {
+
+                var inicio = vuelta=new Date().getTime();
+
+                // obteneos la fecha actual
+                var actual = new Date().getTime();
+
+                // obtenemos la diferencia entre la fecha actual y la de inicio
+                var diff=new Date(actual-inicio);
+
+                // mostramos la diferencia entre la fecha actual y la inicial
+                var result=LeadingZero(diff.getUTCHours())+":"+LeadingZero(diff.getUTCMinutes())+":"+LeadingZero(diff.getUTCSeconds());
+                document.getElementById('crono').innerHTML = result;
+
+                // Indicamos que se ejecute esta función nuevamente dentro de 1 segundo
+                timeout=setTimeout("funcionando()",1000);
+            }
+
+            /* Funcion que pone un 0 delante de un valor si es necesario */
+            function LeadingZero(Time) {
+                return (Time < 10) ? "0" + Time : + Time;
+            }
+
+        </script>
+        <div id="reloj" style="font-size:20px;" onload="startTime()"></div>
+        <div class="crono_wrapper">
+            <h2 id='crono'>00:00:00</h2>
+            <input type="button" value="Empezar" onclick="empezarDetener(this);">
+        </div>
+        <div id="botonera">
+            <br><button type="button" onclick="funcionando()">Poner a 0</button>
+            <button type="button">Arrancar cronometro</button>
+            <button type="button">Parar cronometro</button>
+            <button type="button">Escribir valor</button>
+        </div>
+
+    </body>
+</html>

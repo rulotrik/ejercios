@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>u2e1_string</title>
+    </head>
+    <body>
+        <p id="numeroLoteria0"></p>
+        <p id="numeroLoteria1"></p>
+        <p id="numeroLoteria2"></p>
+        <p id="numeroLoteria3"></p>
+        <p id="numeroLoteria4"></p>
+        <p id="numeroLoteria5"></p>
+        <p id="numeroLoteria6"></p>
+        <p id="numeroLoteria7"></p>
+        <p id="numeroLoteria8"></p>
+        <p id="numeroLoteria9"></p>
+
+        <script>
+            var loteria = prompt("Pulsa el numero de la loteria a la que quieres jugar \n 1. Loteria Nacional\n 2. Quiniela\n 3. Primitiva");
+
+            if (loteria == 1){ //Loteria nacional
+                var numero = Math.floor((Math.random() * 99999) + 1);
+                document.getElementById("numeroLoteria0").innerHTML = "Numero de loteria: "+numero;
+
+
+
+            } else if (loteria == 2){ //Primitiva 
+                var numero;
+                for (i=0; i<5; i++){
+                    numero = Math.floor((Math.random() * 40) + 1);
+                    document.getElementById("numeroLoteria"+i).innerHTML = numero;
+                }
+
+            } else if (loteria == 3){ //Quiniela    
+                var numero;
+                var posibilidades = "1X2";
+
+                for (var i = 0; i < 10; i++){
+                    numero = posibilidades.charAt(Math.floor(Math.random() * posibilidades.length));
+                    document.getElementById("numeroLoteria"+i).innerHTML = numero;
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

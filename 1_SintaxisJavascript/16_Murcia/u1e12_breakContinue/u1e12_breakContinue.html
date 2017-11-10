@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>    
+        <meta charset="utf-8">
+        <title>u1e12_breakContinue</title>
+    </head>
+
+    <body>
+        <p id="demo"></p>
+        <script>
+
+            //Ejercicio de multiplos del 3
+            /*
+            var textoGeneral = "";
+
+            for (i = 0; i <= 100; i++){
+
+                if (i%3==0){
+                    continue;
+                }
+
+                var actual = i;
+                textoGeneral = textoGeneral.concat(actual + ", ");
+
+                document.getElementById("demo").innerHTML = textoGeneral;
+            }
+            */
+
+            //Ejercicio de los meses de verano
+
+            var textoGeneral = "";
+
+            for (i = 0; i <= 19; i++){
+
+                switch (i){
+                    case 1: 
+                        textoGeneral = textoGeneral.concat("Enero" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 2: 
+                        textoGeneral = textoGeneral.concat("Febrero" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 3: 
+                        textoGeneral = textoGeneral.concat("Marzo" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 4: 
+                        textoGeneral = textoGeneral.concat("Abril" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 5: 
+                        textoGeneral = textoGeneral.concat("Mayo" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 6: 
+                        textoGeneral = textoGeneral.concat("Septiembre" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 7: 
+                        textoGeneral = textoGeneral.concat("Octubre" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 8: 
+                        textoGeneral = textoGeneral.concat("Noviembre" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                    case 9: 
+                        textoGeneral = textoGeneral.concat("Diciembre" + ", ");
+                        document.getElementById("demo").innerHTML = textoGeneral;
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objetos. Metodos</title>
+    </head>
+
+    <body>
+        <script>
+            /*
+            Sintaxis de creacion de metodos de un objeto:
+            <nombre_metodo> : function() {
+                //Instrucciones
+            }
+            
+            Sintaxis de acceso a metodos de un objeto:
+            <nombre_objeto>.<nombre_metodo>();
+            */
+            
+            var persona1 = {nombre:"Ada",
+                            apellido:"Lovelace",
+                            nombreCompleto: function(){
+                                return this.nombre + " " + this.apellido;
+                                }
+                           };
+            
+            alert(persona1.nombreCompleto());
+        </script>
+    </body>
+</html>

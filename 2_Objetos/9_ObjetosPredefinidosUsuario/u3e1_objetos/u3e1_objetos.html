@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Objetos. Metodos</title>
+    </head>
+
+    <body>
+        <script>
+            /*var sandskill1 = {nombre: "Juan",
+                              apellido:"Montalban",
+                              especialidad: "JS",
+                              mostrar: function(){
+                                  return this.nombre+"/"+this.apellido +"/"+this.especialidad;
+                              }
+                             };*/
+
+            
+            var sandskill2 = new Object();
+            sandskill2.nombre = "Pepe";
+            sandskill2.apellido = "Rodiguez";
+            sandskill2.especialidad = "Java";
+            sandskill2.mostrar(){
+                return this.nombre+"/"+this.apellido +"/"+this.especialidad;
+            };
+
+/*
+            function sandskill3 (nombre, apellido, especialidad){
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.especialidad = especialidad;
+
+                this.mostrar = function (){
+                    return this.nombre+"/"+this.apellido +"/"+this.especialidad;
+                }
+            }*/
+
+           // alert(sandskill1.mostrar());
+            alert(sandskill2.mostrar());
+
+            //  sandskill1.nacionalidad = "inglesa";
+            //  sandskill2.lenguaje = "C++";
+            //  delete sandskill3.especialidad;
+        </script>
+    </body>
+</html>

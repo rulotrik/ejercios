@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>u3e3_arrays</title>
+        <script type="text/javascript" src="functions.js"></script>
+        <script type="text/javascript" src="sandskill.js"></script>
+    </head>
+
+    <body>
+        <script>
+
+            alert("Bievenido al programa de gestion de Sandkills");
+
+            while (person != 0) {
+                var person = prompt("1. Insertar Sandskill al principio\n2. Insertar Sandskill al final\n3. Borrar el primer sandkill de la lista\n4. Borrar el último sandkill de la lista\n5. Mostrar la lista de sandkill\n6. Mostrar la lista de sandkills ordenada\n7. Buscar un sandkill a partir de su nombre\n8. Buscar un sandkill a partir de su posición\n0. Salir");
+                person = parseInt(person);
+
+                switch (person) {
+                    case 1:
+                        insertarObjInicio();
+                        break;
+                    case 2:
+                        insertarObjIFinal();
+                        break;
+                    case 3:
+                        borrarObjInicio();
+                        break;
+                    case 4:
+                        borrarObjFinal();
+                        break;
+                    case 5:
+                        mostrarArray();
+                        break;
+                    case 6:
+                        mostrarArrayOrdenado();
+                        break;
+                    case 7:
+                        buscarObjParametro();
+                        break;
+                    case 8:
+                        buscarObjPosicion();
+                        break;
+                    case 0:
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html> 
